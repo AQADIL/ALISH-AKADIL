@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="kk-KZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BASPALDAQ 2 - ГРАНТ ҰБТ-ға жедел дайындық курсы">
+    <title>BASPALDAQ 2.0 - ГРАНТ ҰБТ жедел дайындық</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #2ecc71 0%, #3498db 100%);
+            --accent-color: #f1c40f;
+            --dark-bg: #2c3e50;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            background: var(--dark-bg);
+            color: #ecf0f1;
+            font-family: 'Exo 2', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)),
+                      
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 3.5rem;
+            background: var(--main-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(46, 204, 113, 0.3);
+            margin: 1rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: titleEntrance 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .price-tag {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #e67e22, #f1c40f);
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            box-shadow: 0 5px 25px rgba(230, 126, 34, 0.3);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .teacher-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 3rem 5%;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .teacher-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: var(--card-bg);
+        }
+
+        .registration-cta {
+            text-align: center;
+            padding: 4rem 5%;
+            position: relative;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2.5rem;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        /* Анимации */
+        @keyframes titleEntrance {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .teacher-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title">BASPALDAQ 2</h1>
+            <div class="price-tag">3 490₸</div>
+            <p class="animate-on-scroll">ГРАНТ ҰБТ-ға сапалы дайындалу!</p>
+        </div>
+    </section>
+
+    <div class="course-grid">
+        <div class="course-card animate-on-scroll">
+            <h3>🎯 Негізгі артықшылықтар</h3>
+            <ul>
+                <li>Тікелей эфирдағы сабақтар</li>
+                <li>Авторлық оқу материалдары</li>
+                <li>24/7 жауап алу мүмкіндігі</li>
+            </ul>
+        </div>
+
+        <div class="course-card animate-on-scroll" style="transition-delay: 0.2s">
+            <h3>📈 Математика</h3>
+            <ul>
+                <li>Тақырыптық видео-сабақтар</li>
+                <li>ҰБТ сливтарың талдау</li>
+                <li>Үй жұмысы</li>
+            </ul>
+        </div>
+
+        <div class="course-card animate-on-scroll" style="transition-delay: 0.4s">
+            <h3>💻 Информатика</h3>
+            <ul>
+                <li>Әр тақырыпқа Quizizz тесттар </li>
+                <li>Чек-листтар жинағы</li>
+                <li>Авторлық нұсқалар</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="teacher-section">
+        <div class="teacher-card animate-on-scroll">
+            <h3>Ақәділ ағай</h3>
+            <p>Математика</p>
+            <div class="teacher-bio">
+                <p>• AITU университетінің 1-курс студенті </p>
+                <p>• "Түсінікті тілмен жеткізу - парыз"</p>
+            </div>
+        </div>
+
+        <div class="teacher-card animate-on-scroll">
+            <h3>Молдияр ағай</h3>
+            <p>Информатика</p>
+            <div class="teacher-bio">
+                <p>• ENU университетінің 1-курс студенті</p>
+                <p>• Информатикадан - өз ісінің шебері</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration-cta animate-on-scroll">
+        <h2>Дәл қазір тіркел!</h2>
+        <a href="https://wa.me/87762349535" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp арқылы тіркелу
+        </a>
+        <p style="margin-top: 1rem">Номер: +7 776 234 95 35</p>
+    </section>
+
+    <script>
+        // Intersection Observer для анимаций
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Параллакс эффект для героя
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector('.hero-section').style.backgroundPositionY = scrolled * 0.5 + 'px';
+        });
+
+        // Динамическое обновление цены
+        function updatePriceDisplay() {
+            const priceElement = document.querySelector('.price-tag');
+            const originalPrice = 3990;
+            const discountPrice = 3490;
+            
+            priceElement.innerHTML = `
+                <span style="text-decoration: line-through; opacity: 0.7">${originalPrice}₸</span>
+                <span style="margin: 0 10px">→</span>
+                <span style="color: #f1c40f">${discountPrice}₸</span>
+            `;
+        }
+        updatePriceDisplay();
+    </script>
+</body>
+</html>
